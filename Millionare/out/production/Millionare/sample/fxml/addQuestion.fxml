@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<AnchorPane prefHeight="554.0" prefWidth="763.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.ControllerQuestion">
+   <children>
+      <Button fx:id="addQuestions" layoutX="635.0" layoutY="469.0" mnemonicParsing="false" onAction="#handleButtonClick" text="Добавить" />
+      <TextField fx:id="answers1" layoutX="35.0" layoutY="138.0" prefHeight="31.0" prefWidth="686.0" />
+      <TextField fx:id="answers2" layoutX="35.0" layoutY="216.0" prefHeight="31.0" prefWidth="686.0" />
+      <TextField fx:id="answers3" layoutX="35.0" layoutY="293.0" prefHeight="31.0" prefWidth="686.0" />
+      <TextField fx:id="answers4" layoutX="35.0" layoutY="381.0" prefHeight="31.0" prefWidth="686.0" />
+      <TextField fx:id="question_names" layoutX="35.0" layoutY="35.0" prefHeight="31.0" prefWidth="686.0" />
+      <Label layoutX="35.0" layoutY="14.0" text="Название" />
+      <Label layoutX="35.0" layoutY="109.0" text="Ответ 1" />
+      <Label layoutX="35.0" layoutY="188.0" text="Ответ 2" />
+      <Label layoutX="35.0" layoutY="267.0" text="Ответ 3" />
+      <Label layoutX="35.0" layoutY="352.0" text="Ответ 4" />
+      <ComboBox fx:id="correct_answer" layoutX="35.0" layoutY="469.0" prefWidth="150.0" />
+      <Label layoutX="35.0" layoutY="429.0" text="Правильный ответ" />
+      <Label layoutX="241.0" layoutY="429.0" text="Оценка вопроса(баллы)" />
+      <TextField fx:id="question_balances" layoutX="241.0" layoutY="469.0" prefHeight="31.0" prefWidth="94.0" />
+      <Button layoutX="533.0" layoutY="469.0" mnemonicParsing="false" onAction="#button_clear" text="Очистить" />
+   </children>
+</AnchorPane>

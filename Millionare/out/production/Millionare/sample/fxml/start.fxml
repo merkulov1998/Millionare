@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.Game">
+   <children>
+      <HBox layoutX="11.0" layoutY="567.0" prefHeight="200.0" prefWidth="800.0">
+         <children>
+            <Button fx:id="answer1" maxHeight="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleButtonClicks" prefWidth="200.0" text="1" />
+            <Button fx:id="answer2" maxHeight="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleButtonClicks" prefWidth="200.0" text="2" />
+            <Button fx:id="answer3" maxHeight="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleButtonClicks" prefWidth="200.0" text="3" />
+            <Button fx:id="answer4" mnemonicParsing="false" onAction="#handleButtonClicks" prefHeight="200.0" prefWidth="200.0" text="4" />
+         </children>
+      </HBox>
+      <Pane fx:id="QuestionPane" layoutX="14.0" layoutY="40.0" prefHeight="511.0" prefWidth="794.0">
+         <children>
+
+            <Text fx:id="question1" layoutX="37.0" layoutY="155.0" text="вариант 1" wrappingWidth="743.0">
+               <font>
+                  <Font size="18.0" />
+               </font></Text>
+            <Text fx:id="question2" layoutX="37.0" layoutY="226.0" text="вариант 2" wrappingWidth="743.0">
+               <font>
+                  <Font size="18.0" />
+               </font></Text>
+            <Text fx:id="question3" layoutX="37.0" layoutY="299.0" text="вариант 3" wrappingWidth="743.0">
+               <font>
+                  <Font size="18.0" />
+               </font></Text>
+            <Text fx:id="question4" layoutX="37.0" layoutY="380.0" text="вариант 4" wrappingWidth="743.0">
+               <font>
+                  <Font size="18.0" />
+               </font></Text>
+            <TextField fx:id="questionName" layoutX="23.0" layoutY="20.0" prefHeight="31.0" prefWidth="743.0" />
+            <Label layoutX="358.0" layoutY="69.0" text="Ответы">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Separator layoutY="332.0" prefHeight="0.0" prefWidth="794.0" />
+            <Separator layoutX="1.0" layoutY="115.0" prefHeight="0.0" prefWidth="794.0" />
+            <Separator layoutX="1.0" layoutY="182.0" prefHeight="0.0" prefWidth="794.0" />
+            <Separator layoutX="-2.0" layoutY="253.0" prefHeight="0.0" prefWidth="794.0" />
+            <Separator layoutY="404.0" prefHeight="0.0" prefWidth="794.0" />
+            <Text fx:id="Text_error" layoutX="273.0" layoutY="450.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="250.0" />
+            <Label layoutX="19.0" layoutY="137.0" text="1">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="19.0" layoutY="208.0" text="2">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="19.0" layoutY="281.0" text="3">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="18.0" layoutY="359.0" text="4">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <VBox fx:id="vBox" layoutX="862.0" layoutY="658.0" prefHeight="150.0" prefWidth="338.0" />
+      <Label layoutX="997.0" layoutY="40.0" text="Игрок">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="917.0" layoutY="118.0" prefHeight="21.0" prefWidth="48.0" text="Имя" />
+      <Label layoutX="917.0" layoutY="150.0" text="Баланс" />
+      <Text fx:id="player_name" layoutX="970.0" layoutY="134.0" wrappingWidth="122.0" />
+      <Text fx:id="player_balance" layoutX="977.0" layoutY="166.0" wrappingWidth="74.0" />
+      <Label layoutX="991.0" layoutY="230.0" text="Вопросы">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="920.0" layoutY="296.0" text="Текущий вопрос" />
+      <Label layoutX="919.0" layoutY="332.0" text="Баллы за вопрос" />
+      <Text fx:id="number_question" layoutX="1042.0" layoutY="312.0" wrappingWidth="59.0" />
+      <Text fx:id="question_price" layoutX="1041.0" layoutY="348.0" wrappingWidth="48.0" />
+      <Button fx:id="btn_skipQuestion" layoutX="914.0" layoutY="430.0" mnemonicParsing="false" onAction="#skipQuestion" prefHeight="50.0" prefWidth="256.0" text="Пропустить вопрос" />
+      <Button layoutX="914.0" layoutY="501.0" mnemonicParsing="false" onAction="#answerTrue" prefHeight="50.0" prefWidth="256.0" text="Ответить правильно(30 баллов)" />
+      <Label layoutX="914.0" layoutY="376.0" text="True" />
+      <Label layoutX="1048.0" layoutY="376.0" text="False" />
+      <Text fx:id="answerTrue" layoutX="958.0" layoutY="391.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="40.0" />
+      <Text fx:id="answerFalse" layoutX="1110.0" layoutY="392.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="40.0" />
+   </children>
+</AnchorPane>

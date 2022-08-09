@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.ControllerRecord">
+   <children>
+      <TableView fx:id="tableRecord" layoutX="19.0" layoutY="65.0" prefHeight="200.0" prefWidth="575.0">
+        <columns>
+          <TableColumn fx:id="columnName" prefWidth="216.0" text="Имя" />
+          <TableColumn fx:id="balance" minWidth="3.0" prefWidth="178.0" text="баланс" />
+            <TableColumn fx:id="correctAnswer" prefWidth="180.0" text="правильные ответы" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
